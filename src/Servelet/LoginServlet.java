@@ -34,8 +34,9 @@ public class LoginServlet extends HttpServlet{
             if(userList != null && !userList.isEmpty()){
                 userList = userDAO.queryInfo("Password", password);
                 if(userList != null && !userList.isEmpty()){
-                    printWriter.print("登录成功");
-                    printWriter.print(getSuccessMsg("将跳转至首页"));
+                    request.getSession().setAttribute("Username", username);
+                    printWriter.print(getSuccessMsg("登录成功"));
+                    //printWriter.print(getSuccessMsg("将跳转至首页"));
                     return;
                 }
                 else printWriter.print(getErrorAlertMsg("密码错误"));
@@ -46,9 +47,9 @@ public class LoginServlet extends HttpServlet{
     }
 
     private String getErrorAlertMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');widow.location.href='JSP/login.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='login.jsp';</script>";
     }
     private String getSuccessMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/login.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/main.jsp';</script>";
     }
 }

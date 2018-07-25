@@ -13,19 +13,19 @@
   </head>
 
   <body>
-  <h1>Welcome to my web</h1>
-  <hr/>
-  Hello World!<br/>
+  <div style="text-align: center">
+    <h1>Welcome to my web</h1>
+    <hr/>
+    现在这是一个二手交易平台了<br/>
+    <br/>
 
-  <br/>
-
-  <tr>
-    <td colspan="2">
-      <input class="button" type="button" onclick="goRegister()" value="注册">
-      <input class="button" type="button" onclick="goLogin()" value="登录">
-    </td>
-  </tr>
-
+    <tr>
+      <td colspan="2">
+        <input class="button" type="button" onclick="goRegister()" value="注册">
+        <input class="button" type="button" onclick="goLogin()" value="登录">
+      </td>
+    </tr>
+  </div>
   </body>
 
 <script language="JavaScript">

@@ -55,10 +55,9 @@ public class RegisterServlet extends HttpServlet{
         HibernateUtil.closeSession();
     }
     private String getErrorAlertMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/register.jsp;</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='register.jsp';</script>";
     }
     private String getSuccessMsg(String msg){
-        //其实应该跳到主界面，但是还没写
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/index.jsp;</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='login.jsp';</script>";
     }
 }
