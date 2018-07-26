@@ -46,8 +46,8 @@ public class RegisterServlet extends HttpServlet{
 
         UserEntity user = new UserEntity();
         user.setId(10000 + (int)(Math.random() * 10000));
-        user.setUsername(username);
-        user.setPassword(password);
+        user.setName(username);
+        user.setPwd(password);
 
         String result = userDAO.insertUser(user);
         printWriter.print(getSuccessMsg(result));

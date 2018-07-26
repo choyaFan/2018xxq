@@ -1,0 +1,264 @@
+body{
+    background:url("../image/ja1.jpg")  no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-form {
+    background:#fff;
+    width:32%;
+    margin:9% auto 4% auto;
+    position: relative;
+}
+.head {
+    position: absolute;
+    top:-15%;
+    left: 35%;
+}
+.head img {
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border:6px solid rgba(221, 218, 215, 0.23);
+}
+
+form {
+    padding:24% 2.5em;
+}
+form li{
+    border:1px solid #B4B2B2;
+    list-style:none;
+    margin-bottom:25px;
+    width:100%;
+    background:none;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+
+}
+
+.icon{
+    background:url("../image/icons.png")  no-repeat 0 0;
+    height:30px;
+    width:30px;
+    display: block;
+    float:left;
+    margin:7px -11px 0 0;
+}
+
+.user{
+    background: url("../image/icons.png") no-repeat 12px 11px;
+
+}
+.lock{
+    background: url("../image/icons.png") no-repeat -17px 11px;
+}
+
+input[type="text"], input[type="password"] {
+    font-family: 'Open Sans', sans-serif;
+    width:60%;
+    padding:0.7em 2em 0.7em 1.7em;
+    color:#858282;
+    font-size:18px;
+    outline: none;
+    background: none;
+    border:none;
+    font-weight:600;
+}
+form li:hover{
+    border:1px solid #40A9DF;
+    box-shadow: 0 0 1em #40A9DF;
+    -webkit-box-shadow: 0 0 1em #40A9DF;
+    -o-box-shadow: 0 0 1em #40A9DF;
+    -moz-box-shadow: 0 0 1em #40A9DF;
+}
+input[type="button"][value="SIGN UP"] {
+    float:left;
+    font-size:18px;
+    display: inline-block;
+    font-weight:600;
+    color: #fff;
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    cursor: pointer;
+    outline: none;
+    padding:15px 10px;
+    margin-top:3px;
+    font-family: 'Open Sans', sans-serif;
+    width:40%;
+    border:none;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    background: #ffe49e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffe49e 0%, #ffb700 3%, #ffad00 35%, #ff9000 97%, #e27f00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe49e), color-stop(3%,#ffb700), color-stop(35%,#ffad00), color-stop(97%,#ff9000), color-stop(100%,#e27f00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe49e', endColorstr='#e27f00',GradientType=0 ); /* IE6-9 */
+}
+input[type="button"][value="SIGN UP"]:hover{
+    background: #e27f00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e27f00 0%, #ff9000 3%, #ffad00 65%, #ffb700 97%, #ffe49e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e27f00), color-stop(3%,#ff9000), color-stop(65%,#ffad00), color-stop(97%,#ffb700), color-stop(100%,#ffe49e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e27f00', endColorstr='#ffe49e',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+input[type="submit"][value="SIGN IN"] {
+    float:right;
+    font-size:18px;
+    display: inline-block;
+    font-weight:600;
+    color: #fff;
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    cursor: pointer;
+    outline: none;
+    padding:15px 10px;
+    margin-top:3px;
+    font-family: 'Open Sans', sans-serif;
+    width:40%;
+    border:none;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    background: #ffe49e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffe49e 0%, #ffb700 3%, #ffad00 35%, #ff9000 97%, #e27f00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe49e), color-stop(3%,#ffb700), color-stop(35%,#ffad00), color-stop(97%,#ff9000), color-stop(100%,#e27f00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffe49e 0%,#ffb700 3%,#ffad00 35%,#ff9000 97%,#e27f00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe49e', endColorstr='#e27f00',GradientType=0 ); /* IE6-9 */
+}
+input[type="submit"][value="SIGN IN"]:hover{
+    background: #e27f00; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e27f00 0%, #ff9000 3%, #ffad00 65%, #ffb700 97%, #ffe49e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e27f00), color-stop(3%,#ff9000), color-stop(65%,#ffad00), color-stop(97%,#ffb700), color-stop(100%,#ffe49e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e27f00 0%,#ff9000 3%,#ffad00 65%,#ffb700 97%,#ffe49e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e27f00', endColorstr='#ffe49e',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+
+
+
+
+.p-container{
+    margin-top:2em;
+}
+.p-container  .checkbox input {
+    position: absolute;
+    left: -9999px;
+}
+.p-container.checkbox i {
+    border-color: #fff;
+    transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+
+}
+.p-container.checkbox i:hover {
+    border-color:red;
+
+}
+.p-container  i:before {
+    background-color: #2da5da;
+}
+.p-container  .rating label {
+    color: #ccc;
+    transition: color 0.3s;
+    -o-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+}
+.p-container  .checkbox input + i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -webkit-transition: opacity 0.1s;
+}
+.p-container .checkbox input + i:after {
+    content:url("../image/tick.png") no-repeat 7px 1px;
+    top:-15px;
+    left:1px;
+    width: 15px;
+    height: 15px;
+}
+.p-container  .checkbox {
+    float: left;
+    margin-right: 30px;
+}
+.p-container .checkbox {
+    padding-left: 40px;
+    font-size: 16px;
+    line-height:60px;
+    color:#858282;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.p-container  .checkbox {
+    position: relative;
+    display: block;
+}
+.p-container  .checkbox i {
+    position: absolute;
+    top:18px;
+    left:5px;
+    display: block;
+    width:22px;
+    height:22px;
+    outline: none;
+    border:1px solid #999;
+    background:#fff;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+}
+.p-container  .checkbox input + i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -webkit-transition: opacity 0.1s;
+}
+.p-container .checkbox input + i:after {
+    color: #2da5da;
+}
+.p-container .checkbox input:checked + i,
+.p-container . input:checked + i {
+    border-color: #2da5da;
+}
+.p-container .rating input:checked ~ label {
+    color: #2da5da;
+}
+
+.p-container .checkbox input:checked + i:after {
+    opacity: 1;
+}

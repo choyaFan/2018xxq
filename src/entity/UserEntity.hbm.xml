@@ -6,13 +6,31 @@
 
     <class name="entity.UserEntity" table="user" schema="javademo">
         <id name="id">
-            <column name="ID" sql-type="int(11)"/>
+            <column name="id" sql-type="int(11)"/>
         </id>
-        <property name="username">
-            <column name="Username" sql-type="char(30)" length="30" not-null="true"/>
+        <property name="img">
+            <column name="img" sql-type="char(255)" not-null="true"/>
         </property>
-        <property name="password">
-            <column name="Password" sql-type="char(30)" length="30" not-null="true"/>
+        <property name="email">
+            <column name="email" sql-type="char(255)"/>
+        </property>
+        <property name="pwd">
+            <column name="pwd" sql-type="char(255)"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="char(255)" not-null="true"/>
+        </property>
+        <property name="stuNum">
+            <column name="stu_num" sql-type="char(255)" not-null="true"/>
+        </property>
+        <property name="qq">
+            <column name="qq" sql-type="char(255)" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="char(255)" not-null="true"/>
+        </property>
+        <property name="messNum">
+            <column name="mess_num" sql-type="int(11)"/>
         </property>
     </class>
 </hibernate-mapping>

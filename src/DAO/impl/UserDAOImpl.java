@@ -21,13 +21,13 @@ public class UserDAOImpl implements UserDAO{
     @Override
     public String insertUser(UserEntity user){
         String result;
-        System.out.println(user.getUsername());
-        System.out.println(user.getPassword());
+        System.out.println(user.getName());
+        System.out.println(user.getPwd());
         try{
             transaction = session.beginTransaction();
             session.save(user);
             transaction.commit();
-            result = "用户：" + user.getUsername() + "注册成功！";
+            result = "用户：" + user.getName() + "注册成功！";
         }catch (Exception e){
             e.printStackTrace();
             result = "注册失败: " + e;
@@ -44,7 +44,7 @@ public class UserDAOImpl implements UserDAO{
             transaction = session.beginTransaction();
             session.update(user);
             transaction.commit();
-            result = "用户：" + user.getUsername() + "信息更新成功!";
+            result = "用户：" + user.getName() + "信息更新成功!";
         }catch (Exception e){
             e.printStackTrace();
             result = "信息更新失败" + e;

@@ -30,9 +30,9 @@ public class LoginServlet extends HttpServlet{
             printWriter.print(getErrorAlertMsg("用户名不能为空"));
         }
         else {
-            List userList = userDAO.queryInfo("Username", username);
+            List userList = userDAO.queryInfo("name", username);
             if(userList != null && !userList.isEmpty()){
-                userList = userDAO.queryInfo("Password", password);
+                userList = userDAO.queryInfo("Pwd", password);
                 if(userList != null && !userList.isEmpty()){
                     request.getSession().setAttribute("Username", username);
                     printWriter.print(getSuccessMsg("登录成功"));

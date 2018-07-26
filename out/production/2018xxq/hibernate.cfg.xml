@@ -18,6 +18,19 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping resource="entity/UserEntity.hbm.xml"/>
+        <mapping resource="entity/CollectEntity.hbm.xml"/>
+        <mapping class="entity.CollectEntity"/>
+        <mapping class="entity.GoodsEntity"/>
+        <mapping resource="entity/GoodsEntity.hbm.xml"/>
+        <mapping class="entity.MessageEntity"/>
+        <mapping resource="entity/MessageEntity.hbm.xml"/>
+        <mapping class="entity.OrderEntity"/>
+        <mapping resource="entity/OrderEntity.hbm.xml"/>
+        <mapping class="entity.ShoppingcartEntity"/>
+        <mapping resource="entity/ShoppingcartEntity.hbm.xml"/>
+        <mapping class="entity.TempOrderEntity"/>
+        <mapping resource="entity/TempOrderEntity.hbm.xml"/>
+        <mapping class="entity.UserEntity"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.MessageEntity" table="message" schema="javademo">
+        <id name="messId">
+            <column name="mess_id" sql-type="int(11) unsigned"/>
+        </id>
+        <property name="messFromId">
+            <column name="mess_from_id" sql-type="int(11)"/>
+        </property>
+        <property name="messToId">
+            <column name="mess_to_id" sql-type="int(11)"/>
+        </property>
+        <property name="messText">
+            <column name="mess_text" sql-type="varchar(255)"/>
+        </property>
+        <property name="sendTime">
+            <column name="send_time" sql-type="datetime"/>
+        </property>
+        <property name="messType">
+            <column name="mess_type" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

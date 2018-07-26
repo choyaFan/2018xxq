@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.OrderEntity" table="order" schema="javademo">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="goodsId">
+            <column name="goods_id" sql-type="int(11)"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="int(11)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="datetime"/>
+        </property>
+        <property name="message">
+            <column name="message" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="comment">
+            <column name="comment" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
