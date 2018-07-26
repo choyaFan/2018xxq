@@ -6,31 +6,31 @@
 
     <class name="entity.UserEntity" table="user" schema="javademo">
         <id name="id">
-            <column name="id" sql-type="int(11)"/>
+            <column name="id" sql-type="int(11)" not-null="true"/>
         </id>
         <property name="img">
-            <column name="img" sql-type="char(255)" not-null="true"/>
+            <column name="img" sql-type="char(255)" />
         </property>
         <property name="email">
-            <column name="email" sql-type="char(255)"/>
+            <column name="email" sql-type="char(255)" not-null="true"/>
         </property>
         <property name="pwd">
-            <column name="pwd" sql-type="char(255)"/>
+            <column name="pwd" sql-type="char(255)" not-null="true"/>
         </property>
         <property name="name">
-            <column name="name" sql-type="char(255)" not-null="true"/>
+            <column name="name" sql-type="char(255)" />
         </property>
         <property name="stuNum">
-            <column name="stu_num" sql-type="char(255)" not-null="true"/>
+            <column name="stu_num" sql-type="char(255)" />
         </property>
         <property name="qq">
-            <column name="qq" sql-type="char(255)" not-null="true"/>
+            <column name="qq" sql-type="char(255)" />
         </property>
         <property name="phone">
-            <column name="phone" sql-type="char(255)" not-null="true"/>
+            <column name="phone" sql-type="char(255)" />
         </property>
         <property name="messNum">
-            <column name="mess_num" sql-type="int(11)"/>
+            <column name="mess_num" sql-type="int(11)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

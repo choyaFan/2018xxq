@@ -25,7 +25,7 @@ public class RegisterServlet extends HttpServlet{
 
         String username = request.getParameter("Username");
         String password = request.getParameter("Password");
-        String confirmPassword = request.getParameter("ConfirmPassword");
+        String confirmPassword = request.getParameter("confirmPassword");
 
         UserDAO userDAO = DAOFactory.getmInstance().getUserDAO(HibernateUtil.getSession());
 
@@ -33,7 +33,7 @@ public class RegisterServlet extends HttpServlet{
             printWriter.print(getErrorAlertMsg("用户名不能为空"));
         }
         else {
-            List userList = userDAO.queryInfo("username", username);
+            List userList = userDAO.queryInfo("name", username);
 
             if(userList != null && !userList.isEmpty()){
                 printWriter.print(getErrorAlertMsg("用户名已存在"));
@@ -46,6 +46,8 @@ public class RegisterServlet extends HttpServlet{
 
         UserEntity user = new UserEntity();
         user.setId(10000 + (int)(Math.random() * 10000));
+        user.setEmail("abc@123.com");
+        user.setMessNum((int)(Math.random() * 100));
         user.setName(username);
         user.setPwd(password);
 
@@ -55,9 +57,9 @@ public class RegisterServlet extends HttpServlet{
         HibernateUtil.closeSession();
     }
     private String getErrorAlertMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='register.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/register.jsp';</script>";
     }
     private String getSuccessMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='login.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/login.jsp';</script>";
     }
 }

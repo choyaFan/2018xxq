@@ -63,12 +63,17 @@
         <div class="p-container">
             <%--<label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Remember Me</label>--%>
             <input type="submit" value="SIGN IN" >
-            <input type="button" value="SIGN UP" >
+            <input type="button" value="SIGN UP" onclick="window.location.href='JSP/register.jsp'">
             <div class="clear"> </div>
         </div>
     </form>
 </div>
-
+<script language="JavaScript">
+    function jump() {
+        // window.location.href='./register.jsp';
+        alert(1);
+    }
+</script>
 
 </body>
 </html>
