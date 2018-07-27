@@ -25,28 +25,8 @@
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
 </head>
-<body>
-<%--<h1>登      录</h1>--%>
-<%--<hr>--%>
-<%--<form action="LoginServlet" method="post">--%>
-    <%--<table class="centertable">--%>
-        <%--<tr>--%>
-            <%--<td class="td1">用户名</td>--%>
-            <%--<td class="td2"><input class="text1" type="text" name="Username"></td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td class="td1">密码</td>--%>
-            <%--<td class="td2"><input class="text1" type="password" name="Password"></td>--%>
-        <%--</tr>--%>
-        <%--<tr>--%>
-            <%--<td colspan="2">--%>
-                <%--<input class="button" type="submit" value="登录" onchange="checkpwd()"/>--%>
-                <%--<input class="button" type="button" value="返回" onclick="history.back();"/>--%>
-            <%--</td>--%>
-        <%--</tr>--%>
-    <%--</table>--%>
-<%--</form>--%>
 
+<body>
 <div class="login-form">
     <div class="head">
         <img src="../image/mem2.jpg" alt=""/>
@@ -68,12 +48,6 @@
         </div>
     </form>
 </div>
-<script language="JavaScript">
-    function jump() {
-        // window.location.href='./register.jsp';
-        alert(1);
-    }
-</script>
 
 </body>
 </html>

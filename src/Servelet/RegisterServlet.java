@@ -26,6 +26,9 @@ public class RegisterServlet extends HttpServlet{
         String username = request.getParameter("Username");
         String password = request.getParameter("Password");
         String confirmPassword = request.getParameter("confirmPassword");
+        String email = request.getParameter("email");
+        String QQ = request.getParameter("QQ");
+        String phone = request.getParameter("phone");
 
         UserDAO userDAO = DAOFactory.getmInstance().getUserDAO(HibernateUtil.getSession());
 
@@ -46,10 +49,12 @@ public class RegisterServlet extends HttpServlet{
 
         UserEntity user = new UserEntity();
         user.setId(10000 + (int)(Math.random() * 10000));
-        user.setEmail("abc@123.com");
-        user.setMessNum((int)(Math.random() * 100));
+        user.setEmail(email);
+        user.setMessNum(0);
         user.setName(username);
         user.setPwd(password);
+        user.setQq(QQ);
+        user.setPhone(phone);
 
         String result = userDAO.insertUser(user);
         printWriter.print(getSuccessMsg(result));

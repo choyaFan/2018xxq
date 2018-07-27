@@ -27,6 +27,7 @@
             <td colspan="2">
                 <input class="button" type="button" onclick="goRegister()" value="注册">
                 <input class="button" type="button" onclick="goLogin()" value="登录">
+                <input class="button" type="button" onclick="goUserInfo()" value="Info">
             </td>
         </tr>
 </div>
@@ -49,6 +50,10 @@
 
     function goRegister() {
         window.location = "JSP/register.jsp"
+    }
+
+    function goUserInfo() {
+        window.location = "JSP/userInfo.jsp"
     }
 </script>
 </html>
