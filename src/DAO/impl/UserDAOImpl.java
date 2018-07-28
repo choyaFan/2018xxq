@@ -54,26 +54,21 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public List queryInfo(String type, Object value){
-        String sql = "select * from user as user where user." + type + "=?";
-        System.out.println("queryInfo sql " + sql + " value = " + value);
+    public List<UserEntity> queryInfo(String type, Object value){
+        String hql = "from UserEntity as user where user." + type + "=?1";
+        System.out.println("queryInfo sql " + hql + " value = " + value);
 
         try{
             transaction = session.beginTransaction();
-            Query query = session.createSQLQuery(sql);
+            Query query = session.createQuery(hql);
             query.setParameter(1, value);
-            List list = query.list();
+            List<UserEntity> list = query.list();
             transaction.commit();
             return list;
         }catch (Exception e){
             e.printStackTrace();
             return null;
         }
-//        CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-//        CriteriaQuery<UserEntity> criteriaQuery = criteriaBuilder.createQuery(UserEntity.class);
-//        Root<UserEntity> root = criteriaQuery.from(UserEntity.class);
-//        criteriaQuery.select(root);
-//        criteriaQuery.where()
     }
 
 }

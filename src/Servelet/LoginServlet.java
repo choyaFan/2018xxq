@@ -23,6 +23,7 @@ public class LoginServlet extends HttpServlet{
 
         String username = request.getParameter("Username");
         String password = request.getParameter("Password");
+        UserEntity user;
 
         UserDAO userDAO = DAOFactory.getmInstance().getUserDAO(HibernateUtil.getSession());
 
@@ -30,11 +31,12 @@ public class LoginServlet extends HttpServlet{
             printWriter.print(getErrorAlertMsg("用户名不能为空"));
         }
         else {
-            List userList = userDAO.queryInfo("name", username);
-            if(userList != null && !userList.isEmpty()){
-                userList = userDAO.queryInfo("Pwd", password);
-                if(userList != null && !userList.isEmpty()){
-                    request.getSession().setAttribute("Username", username);
+            List<UserEntity> userList = userDAO.queryInfo("name", username);
+            if(userList.get(0).getName().equals(username)){
+                String psw = userList.get(0).getPwd();
+                if(psw.equals(password)){
+                    user = userList.get(0);
+                    request.getSession().setAttribute("USER", user);
                     printWriter.print(getSuccessMsg("登录成功"));
                     //printWriter.print(getSuccessMsg("将跳转至首页"));
                     return;

@@ -6,11 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="entity.UserEntity" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String username = (String)session.getAttribute("Username");
+    UserEntity user = (UserEntity)session.getAttribute("USER");
+    String username = user.getName();
 %>
 <html>
 <head>

@@ -7,5 +7,5 @@ import java.util.List;
 public interface UserDAO {
     String insertUser(UserEntity userEntity);
     String updateUser(UserEntity userEntity);
-    List queryInfo(String type, Object value);
+    List<UserEntity> queryInfo(String type, Object value);
 }

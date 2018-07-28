@@ -6,11 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="entity.UserEntity" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
-    String username = (String)session.getAttribute("Username");
+    UserEntity user = (UserEntity)session.getAttribute("USER");
+    String username = user.getName();
+    String psw = user.getPwd();
 %>
 <html>
 <head>
@@ -26,7 +29,7 @@
 <div>
     <table width="60%" align="center">
         <tr>
-            <td align="left">欢迎您的光临，<%=username%><br></td>
+            <td align="left">欢迎您的光临，<%=psw%><br></td>
         </tr>
     </table>
 </div>
