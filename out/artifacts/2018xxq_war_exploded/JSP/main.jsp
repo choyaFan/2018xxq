@@ -13,7 +13,6 @@
             + path + "/";
     UserEntity user = (UserEntity)session.getAttribute("USER");
     String username = user.getName();
-    String psw = user.getPwd();
 %>
 <html>
 <head>
@@ -29,7 +28,7 @@
 <div>
     <table width="60%" align="center">
         <tr>
-            <td align="left">欢迎您的光临，<%=psw%><br></td>
+            <td align="left">欢迎您的光临，<%=username%><br></td>
         </tr>
     </table>
 </div>

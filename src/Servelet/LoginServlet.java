@@ -30,6 +30,9 @@ public class LoginServlet extends HttpServlet{
         if(username == null || username.length() == 0){
             printWriter.print(getErrorAlertMsg("用户名不能为空"));
         }
+        else if(password == null || password.length() == 0){
+            printWriter.print(getErrorAlertMsg("密码不能为空"));
+        }
         else {
             List<UserEntity> userList = userDAO.queryInfo("name", username);
             if(userList.get(0).getName().equals(username)){
@@ -49,9 +52,9 @@ public class LoginServlet extends HttpServlet{
     }
 
     private String getErrorAlertMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='login.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/login.jsp';</script>";
     }
     private String getSuccessMsg(String msg){
-        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/main.jsp';</script>";
+        return "<script language='javascript'>alert('" + msg + "');window.location.href='JSP/userInfo.jsp';</script>";
     }
 }

@@ -41,5 +41,6 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="javax.servlet:jstl:1.2" level="project" />
   </component>
 </module>

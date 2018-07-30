@@ -11,6 +11,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+
 <html>
 <head>
     <base href="<%=basePath%>">
@@ -55,62 +56,25 @@
 <!--END HEADER SECTION-->
 
 <div class="container">
-
     <div class="row">
-
         <div class="col-md-8 ">
             <div class="blog-post">
-                <h2>某先进的超电磁炮</h2>
-                <h4>购买于 <a href="#">fcy</a> 2018.1.24 </h4>
+                <h2>对不起</h2>
                 <p>
-                    这是某个贼nb的炮火攻击系统
-                </p>
-                <a href="#" class="btn btn-default btn-lg ">更多 <i class="fa fa-angle-right"></i></a>
-            </div>
-            <div class="blog-post">
-                <h2>某先进的超电磁炮</h2>
-                <h4>购买于 <a href="#">admin</a> 2018.1.24 </h4>
-                <p>
-                    这是某个贼nb的炮火攻击系统
+                    您不是管理员，无法查看对应信息
                 </p>
                 <a href="#" class="btn btn-default btn-lg ">Read More <i class="fa fa-angle-right"></i></a>
             </div>
-            <div class="blog-post">
-                <h2>某先进的超电磁炮</h2>
-                <h4>购买于 <a href="#">admin</a> 2018.1.24 </h4>
-                <p>
-                    这是某个贼nb的炮火攻击系统
-                </p>
-                <a href="#" class="btn btn-default btn-lg ">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-
             <br />
-            <nav>
-                <ul class="pagination">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+
         </div>
-        <div class="col-md-1"></div>
         <div class="col-md-3" style="padding-top: 30px;">
             <div class="row">
                 <ul class="list-group">
                     <li class="list-group-item"><strong>CATEGORIES</strong></li>
-                    <li class="list-group-item">我的购物车</li>
+                    <li class="list-group-item">
+                        <a href="ShoppingCartServlet?currPage=1">我的购物车</a>
+                    </li>
                     <li class="list-group-item">已买到的宝贝</li>
                     <li class="list-group-item">我的收藏</li>
                     <li class="list-group-item">我的信息</li>
@@ -118,8 +82,12 @@
             </div>
             <div class="row">
                 <h3>Advertising</h3>
-
-
+                <br/>
+                <h4>性感静侃</h4>
+                <h4>现招女友</h4>
+                <br/>
+                <br/>
+                <br/>
             </div>
         </div>
 
