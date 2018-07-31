@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.UserEntity" %>
+<%@ page import="org.apache.tomcat.jni.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: 63583
@@ -10,6 +13,24 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
+    UserEntity user = (UserEntity) session.getAttribute("USER");
+    int id = user.getId();
+    int doManage;
+    if(request.getParameter("doManage") != null) {
+        doManage = Integer.parseInt(request.getParameter("doManage"));
+        session.setAttribute("doManage", doManage);
+    }
+    else doManage = 0;
+
+    int flag1 = 0, flag2 = 0;
+    if(session.getAttribute("userFind") != null){
+        UserEntity userFind = (UserEntity)session.getAttribute("userFind");
+        request.setAttribute("userNAME", userFind.getName());
+        request.setAttribute("userEMAIL", userFind.getEmail());
+        request.setAttribute("userPHONE", userFind.getPhone());
+        request.setAttribute("userID", userFind.getId());
+        flag1 = 1;
+    }
 %>
 
 <html>
@@ -58,15 +79,50 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 ">
-            <div class="blog-post">
-                <h2>对不起</h2>
-                <p>
-                    您不是管理员，无法查看对应信息
-                </p>
-                <a href="#" class="btn btn-default btn-lg ">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-            <br />
+            <c:choose>
+                <c:when test="<%=id > 5%>">
+                    <div class="blog-post">
+                        <h2>对不起</h2>
+                        <p>
+                            您不是管理员，无法查看对应信息
+                        </p>
+                        <a href="#" class="btn btn-default btn-lg ">Read More <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </c:when>
+                <c:otherwise>
+                            <nav>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="../JSP/userInfo.jsp?doManage=1">管理用户</a>
+                                    </li>
+                                    <li>
+                                        <a href="../JSP/userInfo.jsp?doManage=2">管理商品</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                </c:otherwise>
+            </c:choose>
+            <c:if test="<%=doManage == 1%>">
+                <div class="input-grout">
+                    <form action="DoManageServlet" method="post">
+                        <input type="text" class="form-control" placeholder="请输入用户名" name="userNameToBan">
+                        <button type="submit" class="btn btn-default">查询</button>
+                    </form>
+                </div>
+            </c:if>
 
+
+            <c:if test="<%=flag1 == 1%>">
+                <div class="blog-post">
+                    <h2><%=request.getAttribute("userNAME")%></h2>
+                    <h4>Email: <%=request.getAttribute("userEMAIL")%></h4>
+                    <p>
+                        联系方式： <%=request.getAttribute("userPHONE")%>
+                    </p>
+                    <a href="BanUserServlet?banID=<%=request.getAttribute("userID")%>" class="btn btn-default btn-lg ">封禁<i class="fa fa-angle-right"></i></a>
+                </div>
+            </c:if>
+            <br />
         </div>
         <div class="col-md-3" style="padding-top: 30px;">
             <div class="row">
@@ -78,6 +134,7 @@
                     <li class="list-group-item">已买到的宝贝</li>
                     <li class="list-group-item">我的收藏</li>
                     <li class="list-group-item">我的信息</li>
+                    <li class="list-group-item">发布商品</li>
                 </ul>
             </div>
             <div class="row">

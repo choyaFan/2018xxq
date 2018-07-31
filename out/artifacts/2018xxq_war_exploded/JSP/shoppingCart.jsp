@@ -174,6 +174,7 @@
                     <li class="list-group-item">已买到的宝贝</li>
                     <li class="list-group-item">我的收藏</li>
                     <li class="list-group-item">我的信息</li>
+                    <li class="list-group-item">发布商品</li>
                 </ul>
             </div>
             <div class="row">
